@@ -1,0 +1,326 @@
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ededed;
+    height: 100%;
+}
+
+input, button {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+button{
+    border: none;
+    outline: none;
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    margin-top: -25px;
+    min-height: 600px;
+}
+
+.set_photo{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background: #74b089;
+    z-index: 2;
+}
+
+.head_photo{
+    position: relative;
+    float: left;
+    height: 100px;
+    width: 100%;
+    margin-top: 330px;
+    padding-left: 25%;
+    z-index: 2;
+}
+
+.head_photo_img{
+    float: left;
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+.route_title{
+    float: left;
+    margin-left: 5%;
+    color: #FFFFFF;
+}
+
+.middle_bar{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 75px;
+    margin-top: -35px;
+    padding-left: 25%;
+    border-bottom: 1px solid #575a5b;
+}
+
+.name_info{
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-left: 125px;
+    width: 100px;
+}
+
+.date_info{
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 150px;
+
+}
+
+.icon{
+    position: relative;
+    float: right;
+    margin-right: 20%;
+}
+
+.good{
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    height: 70px;
+    width: 80px;
+    padding: 20px 5px 20px 5px;
+    cursor: pointer;
+}
+
+.good span{
+    margin-left: 5px;
+}
+
+.bad{
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    height: 70px;
+    width: 80px;
+    padding: 20px 5px 20px 5px;
+    cursor: pointer;
+}
+
+.bad span{
+    margin-left: 5px;
+
+}
+
+.collection{
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    height: 70px;
+    width: 80px;
+    padding: 20px 5px 20px 5px;
+    cursor: pointer;
+}
+
+.collection span{
+    margin-left: 5px;
+}
+
+.default{
+    width: 30px;
+    height: 30px;
+}
+
+.middle_bar_2{
+    /*margin-top: 20px;*/
+    position: relative;
+    width: 100%;
+    height: 150px;
+    padding-left: 30%;
+}
+
+
+.start_time{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+    font-size: 18px;
+    background: #FFFFFF;
+}
+
+.spend_time{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 25px;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background: #FFFFFF;
+}
+
+.people_number{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 25px;
+    font-size: 18px;
+    margin-left: -450px;
+    margin-top: 45px;
+    background: #FFFFFF;
+}
+
+.route_cost{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 25px;
+    font-size: 18px;
+    margin-left: -200px;
+    margin-top: 45px;
+    background: #FFFFFF;
+}
+
+.tour_plan{
+    margin-left: 10%;
+    width: 63%;
+    min-height: 500px;
+    float: left;
+}
+
+.day_item{
+    border: 1px solid #e6e8ea;
+}
+
+.day{
+    height: 150px;
+    width: 150px;
+    border-right: 1px solid #575a5b;
+    float: left;
+}
+
+.border{
+    margin-left: 32%;
+    margin-top: 28%;
+    padding-left: 5px;
+    padding-bottom: 30px;
+    border-radius: 25px;
+    border: 1px solid  #e6e8ea;
+    height: 50px;
+    width: 50px;
+
+}
+
+.left-day{
+    padding-top: 30%;
+    padding-left: 20%;
+    position: center;
+    font-size: 18px;
+}
+
+/*.left-date{
+    padding-top: 5px;
+}*/
+
+.day_info{
+    height: 150px;
+    width: 848px;
+    border: 1px solid #FFFFFF;
+    padding-top: 2%;
+    padding-left: 20%;
+}
+
+.bottom_right{
+    margin-left: 75%;
+    position: relative;
+    width: 20%;
+    min-height: 500px;
+    border-left: 1px solid #e6e8ea;
+}
+
+.day2{
+    height: 150px;
+    width: 150px;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    float: left;
+}
+
+.tour_nav{
+    padding-top: 20%;
+    padding-left: 3%;
+}
+
+#footer{
+    /*position: absolute;*/
+    position: relative;
+    display: block;
+    clear:both;
+    background-color:#3c3c3c;
+    color:#c2c2c2;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    /*z-index: 1;*/
+    font-size:13px;
+}
+
+#footer .link_info{
+    padding:30px 10% 10px 10%;
+    width: 100%;
+    height: 180px;
+}
+#footer .link_info_col{
+    float:left;
+    display:inline;
+}
+#footer .link_info_col dt{
+    height:30px;
+    font-size:14px;
+    overflow:hidden;
+}
+#footer .link_info_intro{
+    width:200px;
+    margin-right:68px;
+}
+#footer .link_info_intro strong{
+    color:#ff9d00;
+    font-weight:normal;
+}
+#footer .link_info_about{
+    width:200px;
+    margin-right:85px;
+}
+#footer .link_info_about dd p{
+    margin-bottom: 2px;
+}
+
+#footer .link_info_qrcode{
+    float:left;
+    line-height:1.4em;
+}
+#footer .link_info_qrcode dd{
+    width:100px;
+    display:inline;
+    margin-left:30px;
+    float:left;
+    text-align:center;
+}
+#footer .link_info_qrcode span{
+    display:block;
+    height:90px;
+    margin:0 0 8px 6px;
+}
+
+#footer .company{
+    width: 100%;
+    height: 40px;
+    background-color: #3c3c3c;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    border-top:1px solid #575a5b;
+}

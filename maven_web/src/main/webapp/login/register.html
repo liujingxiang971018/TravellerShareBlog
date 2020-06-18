@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>注册</title>
+    <link href="../css/register.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="row">
+    <!--导航栏-->
+    <nav class="navbar navbar-default"><!--navbar-default:灰白色；navbar-inverse:黑色-->
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <!--定义汉堡按钮-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <!--定义汉堡按钮的三条线-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)">游书-旅游分享平台</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./register.html">注册</a></li>
+                    <li><a href="login.html">登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</div>
+
+<div>
+    <div class="content_left">
+        <!--设置背景，及文字介绍信息-->
+        <div class="text">
+            <h2>注册成为游书用户</h2>
+            <p>游书-旅游分享平台致力于为旅游爱好者精准,快捷的<b style="color: #761c19">查找、推荐、分享</b>旅游攻略信息，让用户拥有舒适的体验!!!</p>
+        </div>
+    </div>
+
+    <div class="content_right">
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <button type="button" id="to_login">登 录</button>
+                </div>
+            </div>
+
+            <div class="form" id="form">
+                <div id="form_text">
+                    <h2>立即注册</h2>
+                    <label>
+                        <span>邮箱</span>
+                        <input type="email" id="re_email"/>
+                        <span id="msg"></span>
+                    </label>
+                </div>
+                <div id="to_register">
+                    <label>
+                        <span>验证码</span>
+                        <input type="text" id="verify_code"/>
+                        <button type="button" id="verify" class="verify" disabled>获取验证码</button>
+                        <span id="verify_msg"></span>
+                    </label>
+                    <br>
+                    <div id="to_act">
+                        <button type="button" class="submit" id="active" disabled>激 活</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    //存放开发者信息
+    <div class="deve_info">
+        <h3><b>平台开发者——基本信息</b></h3>
+        <div class="row padding_top">
+            <div class="col-md-3">
+                <div class="thumbnail"><!--thumbnail:设置一个相框格式的框-->
+                    <img src="../images/liujingxiang.jpg" alt="" width="100%" height="100">
+                    <h4>刘景祥</h4>
+                    <p>四川大学计算机学院软件工程2019级学生，学号：2019223045218，主要贡献：平台架构设计</p>
+                    <a href="javascript:void(0)">Read more</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="../images/zhangjanxiong.jpg" alt="" width="100%" height="100">
+                    <h4>张建雄</h4>
+                    <p>四川大学计算机学院计算机科学与技术2019级学生，学号：2019223040010，主要贡献：平台前端开发</p>
+                    <a href="javascript:void(0)">Read more</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="../images/sunanliang.jpg" alt="" width="100%" height="100">
+                    <h4>孙安亮</h4>
+                    <p>四川大学计算机学院计算机科学与技术2019级学生，学号：2019223040020，主要贡献：平台后端开发</p>
+                    <a href="javascript:void(0)">Read more</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="../images/wanjia.jpg" alt="" width="100%" height="100">
+                    <h4>万佳</h4>
+                    <p>四川大学计算机学院软件工程2019级学生，学号：2019223040104，主要贡献：平台前端开发</p>
+                    <a href="javascript:void(0)">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="company">
+    <p>
+        四川&nbsp;成都225旅游文化公司  版权所有Copyright 2019-2020&copy;，All Rights Reserved 川ICP备12300001
+    </p>
+</div>
+
+<script src="../js/register.js"></script>
+</body>
+</html>
+
+<!--通过ajax局部刷新页面-->
+<!--
+<div>
+    <label>
+        <span>新密码</span>
+        <input type="password" id="re_password"/>
+        <span id="re_password_msg" class="verify"></span>
+    </label><br>
+    <label>
+        <span>再次输入密码</span>
+        <input type="text" id="re_password_again"/>
+        <span id="re_password_again_msg" class="verify"></span>
+    </label>
+    <div id="to_act">
+        <button type="button" class="submit" id="re_btn">注 册</button>
+    </div>
+</div>
+-->

@@ -1,0 +1,286 @@
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ededed;
+    height: 100%;
+}
+
+input, button {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+button{
+    border: none;
+    outline: none;
+}
+
+.Wrapper{
+    margin-top: -20px;
+    position: relative;
+    width: 100%;
+}
+
+.search_header{
+    width: 100%;
+    height: 50px;
+    /*background: #41C074;*/
+    border-top: 1px solid #575a5b;
+    border-bottom: 1px solid #575a5b;
+}
+
+.sorting{
+    margin-left: 10%;
+    width: 35%;
+    height: 50px;
+    /*background: #3c3c3c;*/
+    float: left;
+
+}
+
+.sortType_label{
+    padding-top: 2%;
+    padding-left: 1%;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+#createTime,#collectCount,#spendTime,#routeCost{
+    padding-top: 2%;
+    padding-left: 1%;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+
+    width: 80px;
+    cursor: pointer;
+}
+
+.between{
+    padding-top: 2%;
+    padding-left: 1%;
+    text-align: center;
+    float: left;
+}
+
+.search_result{
+    margin-left: 15%;
+    height: 50px;
+    width: 40%;
+    float: right;
+}
+
+.result_info{
+    margin-top: 3%;
+    margin-right: 10px;
+    float: left;
+    font-size: 15px;
+    color: black;
+}
+
+.input_info{
+    margin-top: 1%;
+    float: left;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+}
+.search_btn{
+    margin-top: 1.5%;
+    margin-left: 5px;
+    width: 100px;
+    float: left;
+}
+
+.content{
+    position: relative;
+    margin-top: 5px;
+    min-height: 450px;
+}
+
+.raiders_items{
+    position: relative;
+    width: 100%;
+}
+.raiders_items .raiders_item{
+    margin: 7px 0 8px 0;
+    width: 100%;
+    height: 150px;
+    border-top: 1px solid #575a5b;
+    border-bottom: 1px solid #575a5b;
+}
+
+.raiders_item .radio{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 65px;
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: center;
+
+}
+
+.raiders_item .item_image{
+    float: left;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.raiders_item .item_label{
+    float: left;
+    margin-left: 235px;
+    /*margin-top: -170px;*/
+    height: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.raiders_item .item_detail{
+    float: left;
+    margin-left: 235px;
+    margin-top: -125px;
+    height: 95px;
+    cursor: pointer;
+}
+.raiders_item .item_type{
+    float: left;
+    margin-left: 240px;
+    margin-top: -30px;
+    height: 24px;
+}
+.raiders_item .item_type_text{
+    float: left;
+    margin-left: 266px;
+    margin-top: -24px;
+    font-size: 13px;
+    /*cursor: pointer;*/
+}
+
+.raiders_item .item_creater{
+    float: left;
+    margin-left: 340px;
+    margin-top: -30px;
+    height: 24px;
+}
+.raiders_item .item_creater_text{
+    float: left;
+    margin-left: 368px;
+    margin-top: -24px;
+    font-size: 13px;
+    /*cursor: pointer;*/
+}
+
+.raiders_item .item_collect{
+    float: right;
+    margin-right: 35px;
+    margin-top: -30px;
+    height: 24px;
+    cursor: pointer;
+}
+.raiders_item .item_collect_text{
+    float: right;
+    margin-right: 5px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+.raiders_item .item_dislike{
+    float: right;
+    margin-right: 135px;
+    margin-top: -30px;
+    height: 24px;
+    cursor: pointer;
+}
+.raiders_item .item_dislike_text{
+    float: right;
+    margin-right: 105px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+.raiders_item .item_like{
+    float: right;
+    margin-right: 245px;
+    margin-top: -30px;
+    height: 24px;
+    cursor: pointer;
+}
+.raiders_item .item_like_text{
+    float: right;
+    margin-right: 205px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+#footer{
+    /*position: absolute;*/
+    position: relative;
+    display: block;
+    clear:both;
+    background-color:#3c3c3c;
+    color:#c2c2c2;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    /*z-index: 1;*/
+    font-size:13px;
+}
+
+#footer .link_info{
+    padding:30px 10% 10px 10%;
+    width: 100%;
+    height: 180px;
+}
+#footer .link_info_col{
+    float:left;
+    display:inline;
+}
+#footer .link_info_col dt{
+    height:30px;
+    font-size:14px;
+    overflow:hidden;
+}
+#footer .link_info_intro{
+    width:200px;
+    margin-right:68px;
+}
+#footer .link_info_intro strong{
+    color:#ff9d00;
+    font-weight:normal;
+}
+#footer .link_info_about{
+    width:200px;
+    margin-right:85px;
+}
+#footer .link_info_about dd p{
+    margin-bottom: 2px;
+}
+
+#footer .link_info_qrcode{
+    float:left;
+    line-height:1.4em;
+}
+#footer .link_info_qrcode dd{
+    width:100px;
+    display:inline;
+    margin-left:30px;
+    float:left;
+    text-align:center;
+}
+#footer .link_info_qrcode span{
+    display:block;
+    height:90px;
+    margin:0 0 8px 6px;
+}
+
+#footer .company{
+    width: 100%;
+    height: 40px;
+    background-color: #3c3c3c;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    border-top:1px solid #575a5b;
+}

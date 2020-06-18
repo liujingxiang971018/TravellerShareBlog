@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>写攻略</title>
+    <link rel="stylesheet" href="../css/writeRoute.css">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default"><!--navbar-default:灰白色；navbar-inverse:黑色-->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--定义汉堡按钮-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!--定义汉堡按钮的三条线-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">首页</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./searchResult.html">查攻略</a></li>
+                <li><a href="./writeRoute.html">写攻略</a></li>
+
+            </ul>
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入城市/景点" id="input_CityMsg" maxlength="10">
+                </div>
+                <button type="submit" class="btn btn-default" id="search_btn">搜一搜</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <!--如果是info页面，展示邮箱号，如果有昵称，则展示昵称-->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  id="nickName"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../settings/info.html" class="active">我的信息</a></li>
+                        <li><a href="../routes/myFavorites.html">我的收藏</a></li>
+                        <li><a href="../routes/myRoutes.html">我的攻略</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../login/logout.html">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+
+<div class="content-Page">
+    <!--设置路线的名称和图片-->
+    <div class="content-top">
+        <span id="route_id" hidden></span>
+        <span id="route_createTime" hidden></span>
+        <input type="file" id="photo" name="" accept="image/jpg,image/jpeg,image/png,image/bmp">
+        <div class="upload_photo" id="upload_photo">
+            <div class="set_photo">
+                <img src="../images/upload_photo.png" class="upload_img" id="upload_img">
+            </div>
+            <div class="photo_label">
+                <h2>设置游记头像</h2>
+                <p>图片建议选择尺寸大于1080p的高清大图，如相机原图</p>
+            </div>
+        </div>
+        <div class="write_title">
+            <input type="text" class="input_title" id="input_title" placeholder="请填写游记标题" maxlength="45" >
+            <span>
+                    可输入
+                    <strong id="input_count">45</strong>
+                    字
+            </span>
+        </div>
+    </div>
+    <!--路线的目录-->
+    <div class="content-bottom container">
+        <!--保存路线的标签信息-->
+        <div class="content-bottom-top">
+            <div class="route_label">
+                <label>攻略标签：</label>
+                <select  id="classify_people">
+                    <option value="">-人物主题-</option>
+                    <option value="情侣">情侣游</option>
+                    <option value="亲子">亲子游</option>
+                    <option value="吃货">吃货游</option>
+                    <option value="学生">学生游</option>
+                    <option value="老人">老人游</option>
+                </select>
+                <select id="classify_scenery">
+                    <option value="">-行程主题-</option>
+                    <option value="文化">文化游</option>
+                    <option value="山水">山水游</option>
+                    <option value="都市">都市游</option>
+                    <option value="人文">人文游</option>
+                </select>
+            </div>
+            <div class="route_time">
+                <label for="start_time">出发时间：</label>
+                <input type="date" id="start_time">
+                <label for="spend_time">花费时间：</label>
+                <input type="number" id="spend_time"><span>&nbsp;天</span>
+                <label for="person_number">出发人数：</label>
+                <input type="number" id="person_number">
+                <label for="route_cost">旅行成本：</label>
+                <input type="number" id="route_cost"><span>&nbsp;元</span>
+            </div>
+        </div>
+        <div class="content-bottom-bottom">
+            <div class="content-bottom-left">
+
+            </div>
+            <!--路线内容-->
+            <div class="content-bottom-right">
+                <div class="write_route">
+<!--                    <input class="note" id="note" placeholder="从这里开始写游记....">-->
+                    <div class="route_content">
+                        <!--<div class='photo_input'>
+                            <input type='file' id='uploadfile' accept='image/jpg,image/jpeg,image/png,image/bmp'>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="insert">
+                    <div class="insert_info">
+                        <ul>
+                            <li ><button class="insert_btn" id="add_detail"><h4>添加简介</h4></button></li>
+                            <li ><button class="insert_btn" id="add_date"><h5>添加日期</h5></button></li>
+                            <li ><button class="insert_btn" id="add_city"><h5>添加城市</h5></button></li>
+                            <li ><button class="insert_btn" id="add_scenery"><h5>添加景点</h5></button></li>
+                            <li ><button class="insert_btn" id="add_text"><h5>添加正文</h5></button></li>
+<!--                            <li ><button class="insert_btn" id="add_image"><h5>添加图片</h5></button></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publish_btn">
+            <button class="publish_view" id="publish_view">
+                <span>发表游记</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!--bottom条-->
+<div id="footer">
+    <div class="link_info">
+        <dl class="link_info_col link_info_intro">
+            <dt>游书——旅游分享平台</dt>
+            <dd>致力于互动分享的旅游分享网站</dd>
+            <dd>查找旅行攻略的<strong>"神器"</strong></dd>
+            <dd><strong>核心目标</strong> 让用户旅行更加轻松</dd>
+            <dd><strong>核心优势</strong> 简洁方便</dd>
+            <dd><strong>核心功能</strong> 查找、推荐、分享</dd>
+        </dl>
+        <dl class="link_info_col link_info_about">
+            <dt>联系我们</dt>
+            <dd><p>刘景祥&nbsp;&nbsp;18280381160</p></dd>
+            <dd><P>张建雄&nbsp;&nbsp;18280381160</p></dd>
+            <dd><p>孙安亮&nbsp;&nbsp;18280381160</p></dd>
+            <dd><p>万&nbsp;&nbsp;&nbsp;&nbsp;佳&nbsp;&nbsp;18280381160</p></dd>
+        </dl>
+        <dl class="link_info_col link_info_qrcode">
+            <dd>
+                <span><img src="../images/wechat_public.jpg" width="90px" height="90px"></span>
+                <strong>微信公众号</strong>
+            </dd>
+            <dd>
+                <span><img src="../images/WeChatSmallProgram.jpg" width="90px" height="90px"></span>
+                <strong>微信小程序</strong>
+            </dd>
+        </dl>
+    </div>
+    <div class="company">
+        <p>
+            四川&nbsp;成都225旅游文化公司  版权所有Copyright 2019-2020&copy;，All Rights Reserved 川ICP备12300001
+        </p>
+    </div>
+</div>
+<script src="../js/writeRoute.js"></script>
+<script>
+    document.getElementById("photo").addEventListener("change",function () {
+        var file=document.getElementById("photo");
+
+        var fileTypes = [".jpg", ".png",".jpeg",".bmp"];
+        var filePath = file.value;
+        //当括号里面的值为0、空字符、false 、null 、undefined的时候就相当于false
+        if(filePath){
+            var isNext = false;
+            var fileEnd = filePath.substring(filePath.indexOf("."));
+            for (var i = 0; i < fileTypes.length; i++) {
+                if (fileTypes[i] == fileEnd) {
+                    isNext = true;
+                    break;
+                }
+            }
+            if (!isNext){
+                alert('不接受此文件类型');
+                file.value = "";
+                return false;
+            }
+        }else {
+            return false;
+        }
+
+        //文件上传
+        var fileItem = $('#photo')[0].files[0];
+        var formData = new FormData();
+        formData.append('file', fileItem);
+        formData.append('type', '1');
+        console.log(formData);
+        $.ajax ({
+            url : "/upLoadRouteAvatarServlet",
+            type : "POST",
+            data : formData,
+            async : true,
+            cache : false,
+            contentType : false,//需设置为false,因为是FormData对象，且已经声明了属性enctype="multipart/form-data"
+            processData : false,//需设置为false,因为data值是FormData对象，不需要对数据做处理
+            dataType : 'json',
+            success : function (data) {
+                // alert("上传成功");
+                $("#photo").prop("name",data.route_avatar);
+                $(".content-top").css("background","url("+data.route_avatar+")");
+
+            },
+            error : function(data) {
+                // alert("上传失败");
+                location.href="./writeRoute.html";
+                $("#photo").prop("name",data.route_avatar);
+                $(".content-top").css("background","url("+data.route_avatar+")");
+            }
+        });
+    });
+</script>
+</body>
+</html>

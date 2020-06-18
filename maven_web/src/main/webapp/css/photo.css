@@ -1,0 +1,253 @@
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ededed;
+}
+
+input, button {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+button{
+    border: none;
+    outline: none;
+}
+.page-tontainer{
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-color:#fff;
+    font-size: 14px;
+}
+
+.content_left{
+    float: left;
+    width: 30%;
+    padding-top: 30px;
+    padding-left: 10%;
+    line-height: 60px;
+
+}
+.content_right {
+    float: left;
+    width: 60%;
+
+    padding-top: 20px;
+    padding-left: 5%;
+    line-height: 40px;
+
+}
+
+.content_left button{
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    font-size: 18px;
+    background: #fff;
+
+}
+
+.content_left .on{
+    background-color: #ec971f;
+    color: #fff;
+}
+
+.content_left .i1{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 10px 0 24px;
+}
+
+.content_left .i2{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 10px 0 24px;
+}
+
+.content_left .i3{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 10px 0 24px;
+}
+
+.content_right .hd{
+    font-size: 24px;
+    border-bottom: 1px solid #575a5b;
+}
+
+.content_right .userinfo{
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+}
+
+.info_input{
+    width: 100%;
+    margin: 5px 0 5px 0;
+    position: absolute;
+}
+
+.info_input #default_photo{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    /*margin-top:15px;*/
+}
+
+.info_input #uploadfile{
+    margin-top: 125px;
+    width: 120px;
+    height: 36px;
+    position: absolute;
+    filter: Alpha(opacity=0);
+    -moz-opacity:0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.info_input .select_file {
+    margin-top: 125px;
+    width: 120px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    background: #d4af7a;
+    position: absolute;
+    z-index: 1;
+    padding-right: 5px;
+
+}
+
+.info_input #note{
+    margin-top: 125px;
+    margin-left: 125px;
+    position: absolute;
+
+}
+
+.info-item {
+    margin-top: 30px;
+}
+.progressBox{
+    margin-top: 170px;
+    width: 50%;
+    height: 10px;
+    background: #fff;
+    display: block;
+    position: absolute;
+}
+.progressBox .progressItem {
+    width: 50%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progressBox .progressBar{
+    width: 0;
+    height: 100%;
+    background: #d4af7a;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progressBox .progressText{
+    font-size: 14px;
+    color: #d4af7a;
+    position: absolute;
+    top: -7px;
+    right: -50px;
+}
+
+.info_input .submit_btn{
+    width: 200px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+
+    margin-top: 20px;
+    margin-left: 70px;
+    background: #d4af7a;
+    text-transform: uppercase;
+}
+
+#footer{
+    position: absolute;
+    display: block;
+
+    clear:both;
+    background-color:#3c3c3c;
+    color:#c2c2c2;
+    width: 100%;
+    height: 200px;
+
+    bottom: 0;
+    font-size:13px;
+}
+
+#footer .link_info{
+    padding:30px 10% 10px 10%;
+    width: 100%;
+    height: 180px;
+}
+#footer .link_info_col{
+    float:left;
+    display:inline;
+}
+#footer .link_info_col dt{
+    height:30px;
+    font-size:14px;
+    overflow:hidden;
+}
+#footer .link_info_intro{
+    width:200px;
+    margin-right:68px;
+}
+#footer .link_info_intro strong{
+    color:#ff9d00;
+    font-weight:normal;
+}
+#footer .link_info_about{
+    width:200px;
+    margin-right:85px;
+}
+#footer .link_info_about dd p{
+    margin-bottom: 2px;
+}
+
+#footer .link_info_qrcode{
+    float:left;
+    line-height:1.4em;
+}
+#footer .link_info_qrcode dd{
+    width:100px;
+    display:inline;
+    margin-left:30px;
+    float:left;
+    text-align:center;
+}
+#footer .link_info_qrcode span{
+    display:block;
+    height:90px;
+    margin:0 0 8px 6px;
+}
+
+#footer .company{
+    width: 100%;
+    height: 40px;
+    background-color: #3c3c3c;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    border-top:1px solid #575a5b;
+}

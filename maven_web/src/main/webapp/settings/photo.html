@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的头像</title>
+    <link rel="stylesheet" href="../css/photo.css">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default"><!--navbar-default:灰白色；navbar-inverse:黑色-->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--定义汉堡按钮-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!--定义汉堡按钮的三条线-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">首页</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="../routes/searchResult.html">查攻略</a></li>
+                <li><a href="../routes/writeRoute.html">写攻略</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入城市/景点" id="input_CityMsg">
+                </div>
+                <button type="submit" class="btn btn-default" id="search_btn">搜一搜</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <!--如果是info页面，展示邮箱号，如果有昵称，则展示昵称-->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  id="nickName"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./info.html" class="active">我的信息</a></li>
+                        <li><a href="../routes/myFavorites.html">我的收藏</a></li>
+                        <li><a href="../routes/myRoutes.html">我的攻略</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../login/logout.html">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+<div class="page-tontainer">
+    <!--主体信息-->
+    <div class="content">
+        <!--左边导航部分-->
+        <div class="content_left">
+            <button id="to_info" ><img class="i1" src="../images/info.jpg">我的信息</button><br>
+            <button id="to_photo" class="on" ><img class="i2" src="../images/photo.jpg">我的头像</button><br>
+            <button id="to_security" ><img class="i3" src="../images/security.jpg">账号安全</button>
+        </div>
+        <!--右边信息部分-->
+        <div class="content_right">
+            <!--信息标题-->
+            <div class="hd">
+                <strong>我的头像</strong>
+            </div>
+            <div class="userinfo">
+                <form action="" method="post" id="user_info">
+                    <div id="error_msg" class="alert alert-danger" style="color: #a94442;background-color: #f2dede;border-color: #ebccd1;display:none"></div>
+                    <!--上传按钮-->
+                    <div class="info_input">
+                        <img src="../images/default_photo.jpg" id="default_photo">
+                        <input type="file" id="uploadfile" accept="image/jpg,image/jpeg,image/png,image/bmp">
+                        <button id="select_file" class="select_file">选择图片</button><span id="note">支持jpg、png、jpeg、bmp，图片大小5M以内</span>
+                    </div>
+
+                    <!-- 进度条 -->
+                    <div class="progressBox" id="progressBox" style="display: none"  ><!--style="display: none"-->
+                        <div class="progressItem">
+                            <div class="progressBar" id="progressBar"></div>
+                            <div class="progressText" id="progressText">0%</div>
+                        </div>
+                    </div>
+
+                    <!--<div class="info_input">
+                        <input type="submit" id="submit_btn" class="submit_btn" value="保存">
+                    </div>-->
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--bottom条-->
+    <div id="footer">
+        <div class="link_info">
+            <dl class="link_info_col link_info_intro">
+                <dt>游书——旅游分享平台</dt>
+                <dd>致力于互动分享的旅游分享网站</dd>
+                <dd>查找旅行攻略的<strong>"神器"</strong></dd>
+                <dd><strong>核心目标</strong> 让用户旅行更加轻松</dd>
+                <dd><strong>核心优势</strong> 简洁方便</dd>
+                <dd><strong>核心功能</strong> 查找、推荐、分享</dd>
+            </dl>
+            <dl class="link_info_col link_info_about">
+                <dt>联系我们</dt>
+                <dd><p>刘景祥&nbsp;&nbsp;18280381160</p></dd>
+                <dd><P>张建雄&nbsp;&nbsp;18280381160</p></dd>
+                <dd><p>孙安亮&nbsp;&nbsp;18280381160</p></dd>
+                <dd><p>万&nbsp;&nbsp;&nbsp;&nbsp;佳&nbsp;&nbsp;18280381160</p></dd>
+            </dl>
+            <dl class="link_info_col link_info_qrcode">
+                <dd>
+                    <span><img src="../images/wechat_public.jpg" width="90px" height="90px"></span>
+                    <strong>微信公众号</strong>
+                </dd>
+                <dd>
+                    <span><img src="../images/WeChatSmallProgram.jpg" width="90px" height="90px"></span>
+                    <strong>微信小程序</strong>
+                </dd>
+            </dl>
+        </div>
+        <div class="company">
+            <p>
+                四川&nbsp;成都225旅游文化公司  版权所有Copyright 2019-2020&copy;，All Rights Reserved 川ICP备12300001
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="../js/photo.js"></script>
+<script>
+    document.getElementById("uploadfile").addEventListener("change",function () {
+        var file=document.getElementById("uploadfile");
+
+        var fileTypes = [".jpg", ".png",".jpeg",".bmp"];
+        var filePath = file.value;
+        //当括号里面的值为0、空字符、false 、null 、undefined的时候就相当于false
+        if(filePath){
+            var isNext = false;
+            var fileEnd = filePath.substring(filePath.indexOf("."));
+            for (var i = 0; i < fileTypes.length; i++) {
+                if (fileTypes[i] == fileEnd) {
+                    isNext = true;
+                    break;
+                }
+            }
+            if (!isNext){
+                alert('不接受此文件类型');
+                file.value = "";
+                return false;
+            }
+        }else {
+            return false;
+        }
+        var fileSize = 0;
+        var fileMaxSize = 1024*5;//5M
+        //var filePath = file.value;
+        if(filePath){
+            fileSize =file.files[0].size;
+            var size = fileSize / 1024;
+            if (size > fileMaxSize) {
+                alert("文件大小不能大于5M！");
+                file.value = "";
+                return false;
+            }else if (size <= 0) {
+                alert("文件大小不能为0M！");
+                file.value = "";
+                return false;
+            }
+        }else{
+            return false;
+        }
+
+        //文件上传
+        $('#progressBox').removeAttr("style");
+
+        var fileItem = $('#uploadfile')[0].files[0];
+        var formData = new FormData();
+        formData.append('file', fileItem);
+        formData.append('type', '1');
+        console.log(formData);
+        $.ajax ({
+            url : "/upLoadFileServlet",
+            type : "POST",
+            data : formData,
+            async : true,
+            cache : false,
+            contentType : false,//需设置为false,因为是FormData对象，且已经声明了属性enctype="multipart/form-data"
+            processData : false,//需设置为false,因为data值是FormData对象，不需要对数据做处理
+            dataType : 'json',
+            xhr: function() {
+                var xhr = $.ajaxSettings.xhr();
+                if (xhr.upload) {
+                    xhr.upload.addEventListener("progress", function (e) {
+                        var loaded = e.loaded; //已经上传大小情况
+                        var tot = e.total; //附件总大小
+                        var per = Math.floor(100 * loaded / tot); //已经上传的百分比
+                        $('#progressBar').css('width',per+'%');   //这里指的是进度条的宽度等于完成的百分比
+                        $('#progressText').text(per+'%'); //显示进度百分比
+                    }, false);
+                    return xhr;
+                }
+            },
+            success : function (data) {
+                // alert("上传成功");
+                $('#progressBox').css("display","none");// 这句是上传成功后将进度条隐藏，看自己需求是否需要
+                // 重置进度条
+                $('#progressBar').css('width','0%');
+                $('#progressText').text('0%');
+
+                location.href="../settings/photo.html";
+            },
+            error : function(data) {
+                // alert("上传失败");
+                $('#progressBox').css("display","none");
+                location.href="../settings/photo.html";
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

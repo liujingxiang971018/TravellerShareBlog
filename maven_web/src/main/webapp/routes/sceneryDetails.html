@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>景点详情</title>
+    <link href="../css/sceneryDetails.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default"><!--navbar-default:灰白色；navbar-inverse:黑色-->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--定义汉堡按钮-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!--定义汉堡按钮的三条线-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">首页</a >
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./searchResult.html">查攻略</a ></li>
+                <li><a href="./writeRoute.html">写攻略</a ></li>
+
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入城市/景点" id="input_CityMsg" maxlength="10">
+                </div>
+                <button type="submit" class="btn btn-default" id="search_btn">搜一搜</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <!--如果是info页面，展示邮箱号，如果有昵称，则展示昵称-->
+                    <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  id="nickName"></a >
+                    <ul class="dropdown-menu">
+                        <li><a href="../settings/info.html" class="active">我的信息</a ></li>
+                        <li><a href="../routes/myFavorites.html">我的收藏</a ></li>
+                        <li><a href="../routes/myRoutes.html">我的攻略</a ></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../login/logout.html">注销</a ></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+
+<div class="container">
+    <div class="wrapper_top">
+        <div class="scenery_name">
+            <span id="scenery_id" hidden></span>
+            <h1 id="scenery_name">XXX</h1>
+        </div>
+    </div>
+    <div class="wrapper_middle">
+        <div class="scenery_photo">
+            <img src="" id="scenery_photo" style="width: 300px;height: 200px" />
+        </div>
+        <div class="picture_right">
+            <div class='scenery_score' id='scenery_score' name=''>
+                评分：<span class='star' id='star1'>☆</span><span class='star' id='star2'>☆</span><span class='star' id='star3'>☆</span><span class='star' id='star4'>☆</span><span class='star' id='star5'>☆</span>
+                <span class="comments_num"><span id="comments_num">0</span>条点评</span>
+            </div>
+            <div class="att_info">
+                <p class="s_location">地址：<span id='scenery_location'>xxxx</span></p>
+                <p class="s_traffic">交通方式：<span id='scenery_traffic'>xxxx</span></p>
+                <p class="s_telephone">电话：<span id='scenery_telephone'>xxxx</span></p>
+            </div>
+            <div class="write_comments">
+                <a class="write" id="write" href="#write_comment">写点评</a>
+            </div>
+        </div>
+        <div class="scenery_details">
+            <p id="scenery_details">青羊宫，道教全国重点宫观，四川省重点文物保护单位。青羊宫位于成都市一环路西二段，侧依锦江，被誉为“川西第一道观”、“西南第一丛林”，是西南地区建筑年代最久远、规模最大的一座道教宫观，也是全国著名的道教宫观之一。青羊宫始建于周朝，原名青羊肆。唐朝中和元年（公元881年）黄巢起义，唐僖宗避难于蜀中，曾将此作为行宫。待他重返长安后，拨钱增建并下诏改为今名。至明朝，唐朝所建殿宇毁于兵灾。现存建筑大多为清代康熙六至十年（1667-1671）陆续重建。</p>
+        </div>
+    </div>
+    <div class="wrapper_bottom">
+        <div class="comments_title">
+            <h2>评论</h2>
+        </div>
+        <div class="personal_comments">
+
+            <!--<div class='personal_comment'>
+                <div class='header'>
+                    <img src='../images/default_photo.jpg' class='head_picture1'>
+                    <p class='user_nickname' id='user_nickname-'>xxx</p>
+                </div>
+                <div class='comments_info'>
+                    <p class='comments_date'>2020-05-09</p>
+                    <p class='comment'>青羊宫位于四川省成都市一环路西二段，被誉为“川西第一道观”、“西南第一丛林”，也是全国著名的道教宫观之一都市一环路西川西第一道观”、“西南第一丛林”，也是全国著名的道教宫观之一</p>
+                </div>
+                <div class="delete">
+                    <a id='delete-' href="javascript:void(0)"><img src='../images/delete.jpg' class='delete_icon'></a>
+                </div>
+            </div>-->
+        </div>
+        <div class="">
+            <!--分页条-->
+            <nav aria-label="Page navigation">
+                <ul class="pager">
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="write_comments_area">
+        <div class="comments_title2">
+            <h2>写评论</h2>
+        </div>
+        <textarea class="write_comment" id="write_comment" maxlength="100" placeholder="这里有哪些亮点？或者槽点？大家都期待着你的评论"></textarea>
+        <div class="publish_button">
+            <button class="publish" id="publish">发布</button>
+        </div>
+    </div>
+</div>
+
+
+<!--bottom条-->
+<div id="footer">
+    <div class="link_info">
+        <dl class="link_info_col link_info_intro">
+            <dt>游书——旅游分享平台</dt>
+            <dd>致力于互动分享的旅游分享网站</dd>
+            <dd>查找旅行攻略的<strong>"神器"</strong></dd>
+            <dd><strong>核心目标</strong> 让用户旅行更加轻松</dd>
+            <dd><strong>核心优势</strong> 简洁方便</dd>
+            <dd><strong>核心功能</strong> 查找、推荐、分享</dd>
+        </dl>
+        <dl class="link_info_col link_info_about">
+            <dt>联系我们</dt>
+            <dd><p>刘景祥&nbsp;&nbsp;18280381160</p ></dd>
+            <dd><P>张建雄&nbsp;&nbsp;18280381160</p ></dd>
+            <dd><p>孙安亮&nbsp;&nbsp;18280381160</p ></dd>
+            <dd><p>万&nbsp;&nbsp;&nbsp;&nbsp;佳&nbsp;&nbsp;18280381160</p ></dd>
+        </dl>
+        <dl class="link_info_col link_info_qrcode">
+            <dd>
+                <span><img src="../images/wechat_public.jpg" width="90px" height="90px"></span>
+                <strong>微信公众号</strong>
+            </dd>
+            <dd>
+                <span><img src="../images/wechat_public.jpg" width="90px" height="90px"></span>
+                <strong>微信小程序</strong>
+            </dd>
+        </dl>
+    </div>
+    <div class="company">
+        <p>
+            四川&nbsp;成都225旅游文化公司  版权所有Copyright 2019-2020&copy;，All Rights Reserved 川ICP备12300001
+        </p >
+    </div>
+</div>
+<script src="../js/sceneryDetails.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ededed;
+    height: 100%;
+}
+
+input, button {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+button{
+    border: none;
+    outline: none;
+}
+.page-container{
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    margin-bottom: -200px;
+    /*z-index: 100;*/
+}
+.content {
+    position: relative;
+    width: 100%;
+    background-color:#fff;
+    font-size: 14px;
+}
+
+.content-top{
+    position: relative;
+    width: 100%;
+    top: -20px;
+}
+
+.content-top-form{
+    position: absolute;
+    top: 200px;
+    left: 38%;/*50%*/
+    /*margin-left: -150px;*/
+    width: 300px;
+    height: 80px;
+    line-height: 35px;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+}
+
+.form-group .radio{
+    position: relative;
+    width: 100%;
+}
+.form-group .input{
+    position: relative;
+    width: 100%;
+}
+
+.content-bottom{
+    position: relative;
+    width: 100%;
+    /*padding: 20px 0 10px 0;*/
+}
+
+.content-bottom .content-bottom-nav{
+    position: relative;
+    margin-top: -15px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.content-bottom-nav .travel_type{
+    float: left;
+    position: relative;
+    width: 160px;
+    height: 50px;
+    left: 18%;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid rgba(29,22,23,0.29);
+}
+
+.travel_type .note{
+    font-size: 12px;
+}
+
+.travel_type button{
+    background: #fff;
+}
+
+.content-bottom .content-bottom-left{
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5.5%;
+    width: 27%;
+    font-size: 17px;
+
+    background: #fff;
+    /*color: #fff;*/
+}
+
+.content-bottom .content-bottom-right{
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    width: 65%;
+    
+    background: #fff;/*#fff*/
+    /*color: #fff;*/
+}
+
+.content-bottom-left .recommend_item{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+.recommend_item .recommend_image{
+    width: 100%;
+    height: 150px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.recommend_item .recommend_label{
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.recommend_item .recommend_name{
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+.content-bottom-right-top {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    border-bottom: 1px solid #575a5b;
+}
+.content-bottom-right-top .Popular_btn{
+    float: left;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    background: #ec971f;/*点击修改属性*/
+    border: 1px solid rgba(29,22,23,0.29);
+
+}
+.content-bottom-right-top .lastestPublish_btn{
+    float: left;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    background: #fff;
+    border: 1px solid rgba(29,22,23,0.29);
+
+}
+.content-bottom-right-top .writeRaiders_btn{
+    float: right;
+    width: 120px;
+    height: 40px;
+    margin-right: 20px;
+    background: #ec971f;
+    border: 1px solid rgba(29,22,23,0.29);
+}
+
+.content-bottom-right-item {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+#raiders_items{
+    width: 100%;
+}
+#raiders_items .raiders_item{
+    margin: 7px 0 8px 0;
+    width: 100%;
+    height: 170px;
+}
+
+.raiders_item .item_image{
+    float: left;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.raiders_item .item_label{
+    float: left;
+    margin-left: 205px;
+    /*margin-top: -170px;*/
+    height: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.raiders_item .item_detail{
+    float: left;
+    margin-left: 205px;
+    margin-top: -125px;
+    height: 95px;
+    cursor: pointer;
+}
+.raiders_item .item_type{
+    float: left;
+    margin-left: 210px;
+    margin-top: -30px;
+    height: 24px;
+}
+.raiders_item .item_type_text{
+    float: left;
+    margin-left: 236px;
+    margin-top: -24px;
+    font-size: 13px;
+    /*cursor: pointer;*/
+}
+
+.raiders_item .item_creater{
+    float: left;
+    margin-left: 310px;
+    margin-top: -30px;
+    height: 24px;
+}
+.raiders_item .item_creater_text{
+    float: left;
+    margin-left: 338px;
+    margin-top: -24px;
+    font-size: 13px;
+    /*cursor: pointer;*/
+}
+
+.raiders_item .item_collect{
+    float: right;
+    margin-right: 35px;
+    margin-top: -30px;
+    height: 24px;
+    cursor: pointer;
+}
+.raiders_item .item_collect_text{
+    float: right;
+    margin-right: 5px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+.raiders_item .item_dislike{
+    float: right;
+    margin-right: 135px;
+    margin-top: -30px;
+    height: 24px;
+    cursor: pointer;
+}
+.raiders_item .item_dislike_text{
+    float: right;
+    margin-right: 105px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+.raiders_item .item_like{
+    float: right;
+    margin-right: 245px;
+    margin-top: -30px;
+    height: 24px;
+    cursor: pointer;
+}
+.raiders_item .item_like_text{
+    float: right;
+    margin-right: 205px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+.content-bottom-right-bottom{
+    position: relative;
+    width: 100%;
+}
+.content-bottom-right-bottom-nav{
+    padding-left: 50%;
+}
+.content-bottom-right-bottom-nav .pagination{
+    margin-left: -115px;
+}
+
+
+#footer{
+    /*position: absolute;*/
+    display: block;
+    clear:both;
+    background-color:#3c3c3c;
+    color:#c2c2c2;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    /*z-index: 1;*/
+    font-size:13px;
+}
+
+#footer .link_info{
+    padding:30px 10% 10px 10%;
+    width: 100%;
+    height: 180px;
+}
+#footer .link_info_col{
+    float:left;
+    display:inline;
+}
+#footer .link_info_col dt{
+    height:30px;
+    font-size:14px;
+    overflow:hidden;
+}
+#footer .link_info_intro{
+    width:200px;
+    margin-right:68px;
+}
+#footer .link_info_intro strong{
+    color:#ff9d00;
+    font-weight:normal;
+}
+#footer .link_info_about{
+    width:200px;
+    margin-right:85px;
+}
+#footer .link_info_about dd p{
+    margin-bottom: 2px;
+}
+
+#footer .link_info_qrcode{
+    float:left;
+    line-height:1.4em;
+}
+#footer .link_info_qrcode dd{
+    width:100px;
+    display:inline;
+    margin-left:30px;
+    float:left;
+    text-align:center;
+}
+#footer .link_info_qrcode span{
+    display:block;
+    height:90px;
+    margin:0 0 8px 6px;
+}
+
+#footer .company{
+    width: 100%;
+    height: 40px;
+    background-color: #3c3c3c;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    border-top:1px solid #575a5b;
+}

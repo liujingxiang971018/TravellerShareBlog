@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果-游书</title>
+    <link rel="stylesheet" href="../css/searchResult.css">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default"><!--navbar-default:灰白色；navbar-inverse:黑色-->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--定义汉堡按钮-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!--定义汉堡按钮的三条线-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">首页</a >
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./searchResult.html">查攻略</a ></li>
+                <li><a href="./writeRoute.html">写攻略</a ></li>
+
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入城市/景点" id="input_CityMsg" maxlength="10">
+                </div>
+                <button type="submit" class="btn btn-default" id="search_btn">搜一搜</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <!--如果是info页面，展示邮箱号，如果有昵称，则展示昵称-->
+                    <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  id="nickName"></a >
+                    <ul class="dropdown-menu">
+                        <li><a href="../settings/info.html" class="active">我的信息</a ></li>
+                        <li><a href="../routes/myFavorites.html">我的收藏</a ></li>
+                        <li><a href="../routes/myRoutes.html">我的攻略</a ></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../login/logout.html">注销</a ></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+
+<div class="Wrapper">
+    <div class="search_header">
+        <div class="sorting">
+            <label class="sortType_label">排序方式：</label>
+
+            <span class="sortType" id="createTime" name="">发表时间</span>
+            <p class="between">|</p>
+            <span class="sortType" id="collectCount" name="">收藏最多</span>
+            <p class="between">|</p>
+            <span class="sortType" id="spendTime" name="">出行天数</span>
+            <p class="between">|</p>
+            <span class="sortType" id="routeCost" name="">旅行花费</span>
+        </div>
+
+        <div class="search_result">
+            <span class="result_info">共有<strong class="route_count">xx</strong>条关于<strong class="search_text">XX</strong>的攻略</span>
+            <input type="text" class="input_info" id="input_info" placeholder="请输入想去的地点" maxlength="20" />
+            <button type="submit" class="btn btn-default search_btn" id="search_btn_2">搜一搜</button>
+        </div>
+    </div>
+
+    <div class="content container">
+        <div id="raiders_items" class="raiders_items">
+            <!--<div class="raiders_item">
+                <span class="route_id" hidden></span>
+                &lt;!&ndash;条目图片&ndash;&gt;
+                <img src="../images/city.jpg" class="item_image">
+                &lt;!&ndash;条目标题&ndash;&gt;
+                <label class="item_label">15天环游日本，体验樱花风景、民族文化和洗涤心灵的一次旅行</label>
+                &lt;!&ndash;条目内容&ndash;&gt;
+                <p class="item_detail">我要对你做，春天对樱花树做的事情。 这是我第三次来 日本 ，第二次来 日本 看樱花。 在这个春天里，我终于又来到了 日本 ，走进这里的青青之森与春天的樱花林。&lt;!&ndash; 一个人，十五天，从北至南，又从南至北，环形 日本 ，去寻找这里的春天。 我要对你做，春天对樱花树做的事情。&ndash;&gt;</p>
+                &lt;!&ndash;条目类型&ndash;&gt;
+                <img src="../images/icon_type.jpg" class="item_type"><span class="item_type_text">人文</span>
+                &lt;!&ndash;条目创建者&ndash;&gt;
+                <img src="../images/icon_creater.jpg" class="item_creater"><span class="item_creater_text">洋洋洒洒</span>
+                &lt;!&ndash;条目点赞数&ndash;&gt;
+                <img src="../images/icon_like_default.jpg" class="item_like" name=""><span class="item_like_text">1233</span>
+                &lt;!&ndash;条目点踩数&ndash;&gt;
+                <img src="../images/icon_dislike_default.jpg" class="item_dislike"  name=""><span class="item_dislike_text">23</span>
+                &lt;!&ndash;条目收藏数&ndash;&gt;
+                <img src="../images/icon_collect_default.jpg" class="item_collect"  name=""><span class="item_collect_text">532</span>
+            </div>-->
+        </div>
+        <div class="">
+            <!--分页条-->
+            <nav aria-label="Page navigation">
+                <ul class="pager">
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</div>
+
+
+<!--bottom条-->
+<div id="footer">
+    <div class="link_info">
+        <dl class="link_info_col link_info_intro">
+            <dt>游书——旅游分享平台</dt>
+            <dd>致力于互动分享的旅游分享网站</dd>
+            <dd>查找旅行攻略的<strong>"神器"</strong></dd>
+            <dd><strong>核心目标</strong> 让用户旅行更加轻松</dd>
+            <dd><strong>核心优势</strong> 简洁方便</dd>
+            <dd><strong>核心功能</strong> 查找、推荐、分享</dd>
+        </dl>
+        <dl class="link_info_col link_info_about">
+            <dt>联系我们</dt>
+            <dd><p>刘景祥&nbsp;&nbsp;18280381160</p ></dd>
+            <dd><P>张建雄&nbsp;&nbsp;18280381160</p ></dd>
+            <dd><p>孙安亮&nbsp;&nbsp;18280381160</p ></dd>
+            <dd><p>万&nbsp;&nbsp;&nbsp;&nbsp;佳&nbsp;&nbsp;18280381160</p ></dd>
+        </dl>
+        <dl class="link_info_col link_info_qrcode">
+            <dd>
+                <span><img src="../images/wechat_public.jpg" width="90px" height="90px"></span>
+                <strong>微信公众号</strong>
+            </dd>
+            <dd>
+                <span><img src="../images/WeChatSmallProgram.jpg" width="90px" height="90px"></span>
+                <strong>微信小程序</strong>
+            </dd>
+        </dl>
+    </div>
+    <div class="company">
+        <p>
+            四川&nbsp;成都225旅游文化公司  版权所有Copyright 2019-2020&copy;，All Rights Reserved 川ICP备12300001
+        </p >
+    </div>
+</div>
+<script src="../js/searchResult.js"></script>
+<script src="../js/searchResult_after.js"></script>
+</body>
+</html>
